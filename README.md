@@ -1,6 +1,4 @@
 Water Quility Prediction
-Desigur, iată o corectare a textului:
-
 Proiectul dat conține un model care prezice calitatea apei într-o anumită zi/lună/an. Acest fișier conține codul principal unde am antrenat modelul și am deja făcut predicția pe baza setului de date. 
 În folderul WebSite se află site-ul unde utilizatorul introduce data și primește înapoi informația dacă apa este potabilă sau nu.
 
