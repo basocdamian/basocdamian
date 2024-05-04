@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f9ff; /* Light blue background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #005f6a; /* Dark blue heading */
+        }
+        .water-droplet {
+            color: #005f6a;
+            font-size: 50px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #005f6a;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #005f6a;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #005f6a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003539;
+        }
+        .prediction-result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #005f6a;
+        }
+    </style>
+</head>
+<body>
+    <h1><i class="fas fa-tint water-droplet"></i> Water Prediction</h1>
+    <form method="post" action="/">
+        <label for="specific_date">Date (YYYY-MM-DD):</label>
+        <input type="text" id="specific_date" name="specific_date" required>
+        <button type="submit"><i class="fas fa-search"></i> Submit</button>
+    </form>
+    {% if prediction_result %}
+    <div class="prediction_result">{{ prediction_result }}</div>
+    {% endif %}
+</body>
+</html>
